@@ -1,0 +1,3 @@
+- MethodChannel 双工
+- EventChannel 只能 Flutter 发起通信
+- BasicMessageChannel 双工

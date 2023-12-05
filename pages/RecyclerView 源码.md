@@ -1,0 +1,4 @@
+- RecycledViewPool 里面是一个 Map，里面通过 viewType 区分了不同的 ViewHolder 的集合。所以必须确保共享的 RecyclerView 的 Adapter 是同一个或者 viewType  是不会冲突的。
+- RecycledViewPool 最好在一个 Activity 内共享。如果跨 Activity 共享需要及时清空 RecycledViewPool 中的数据否则可能出现内存泄漏的情况。所以最好一个 Activity 内共享。
+- 每次向 RecyclerView 填充表项之前都会先清空 LayoutManager 中现存表项，将它们 detach 并同时缓存入 mAttachedScrap 列表中。在紧接着的填充表项阶段，就立马从 mAttachedScrap 中取出刚被 detach 的表项并重新 attach 它们。
+- 获取缓存的大致顺序是：mScrapList -》mChangedScrap -》mAttachedScrap -》mHiddenViews -》mCachedViews -》mViewCacheExtension -》mRecyclerPool

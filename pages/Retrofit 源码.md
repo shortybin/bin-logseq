@@ -1,0 +1,5 @@
+- [源码分析地址](https://github.com/jhbxyz/ArticleRecord/blob/master/articles/%E4%BC%98%E7%A7%80%E5%BC%80%E6%BA%90%E5%BA%93/1Retrofit%E7%9A%84%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90.md)
+- ConverterFactory 的作用是把请求和响应的数据转换为 Java 对象
+- CallAdapterFactory 是一个 Call 的适配器，把 Call 转换为对应的对象，比如转换为 RxJava 的对象
+- 使用了建造者模式、动态代理[[设计模式]]
+- OkHttpCall、HttpServiceMethod、CallAdapted

@@ -1,0 +1,2 @@
+- 在 Android 中，ScrollView 和 HorizontalScrollView 都有一个名为 `android:fillViewport` 的属性。将 `android:fillViewport` 设置为 true 可以确保 ScrollView 的子视图填充整个  视图区域，而不仅仅是它们自己的大小。具体来说，将 `android:fillViewport` 设置为 true 时，ScrollView 会自动调整其子视图的大小，使它们填充整个 ScrollView 的视图区域。这通常用于确保 ScrollView 中的子视图在占用整个可用空间时具有正确的大小和位置。
+- 当 NestedScrollView 嵌套 ViewPage 的时候，ViewPage 会出现高度为 0 的情况，可以通过设置此属性让 ViewPage 占满 NestedScrollView。
